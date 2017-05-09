@@ -7,11 +7,11 @@ this.hobby1 = hobby1;
 this.hobby2 = hobby2;
 this.hobby3 = hobby3;
 this.listado = function(){
-  return ("Nombre: " + this.nombre + " " + this.apellido + "<br>" + "Edad: " + this.edad + " años." + 
-    "<br>" + "Hobbies: <ul><li>" + this.hobby1 + "</li><li>" + this.hobby2 + "</li><li>" + this.hobby3 + "</li>");
+  return ("Nombre: " + this.nombre + " " + this.apellido + "<br>" + "<br>" + "Edad: " + this.edad + " años." + 
+    "<br>" + "<br>" + "Hobbies: <ul><li>" + this.hobby1 + "</li><li>" + this.hobby2 + "</li><li>" + this.hobby3 + "</li>" + "<br>");
 };
  }
- /* contructor*/
+ /* contructor de los datos de las integrantes*/
  
 
 var int1 = new MiembroSquad("1", "Macarena","Baltra", 27, "Encuadernar", "Bailar", "Series");
@@ -33,13 +33,14 @@ arreglo.forEach(function(ele){
   num++;
 
 });
+/* función recorre el arreglo de integrantes y crea un área de texto para dejar comentario*/
 
 function Comentar(id,comentario,like){
   this.id = id;
   this.comentario = comentario;
   this.like = like;
 }
-
+/* contructor del comentario*/
 function agregar(idUser){
     var input = document.getElementById('comen'+idUser).value;
 console.log (input);
@@ -51,15 +52,3 @@ console.log (input);
     
      input = "";
 }
-
-function like(numero){
-  var input = document.getElementById('like'+numero).value;
-  var mostrar = document.getElementById('like'+numero);
-
-  var sum = "";
-  mostrar.innerHTML += ((sum+1).length);
-  console.log (sum);
-  console.log ("paso por aqui");
-  
-}
-
